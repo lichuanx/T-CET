@@ -20,7 +20,7 @@ SuperResIDWE6K3(48,96,2,48,1)SuperResIDWE6K3(96,128,2,96,1)\
 SuperConvK1BNRELU(128,2048,1,1)" > ${save_dir}/init_plainnet.txt
 
 python evolution_search.py --gpu 1 \
-  --zero_shot_score Params \
+  --zero_shot_score orthogonal_synflow \
   --search_space SearchSpace/search_space_IDW_fixfc.py \
   --budget_flops ${budget_flops} \
   --max_layers ${max_layers} \

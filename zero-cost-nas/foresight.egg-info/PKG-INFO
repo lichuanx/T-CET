@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: foresight
+Version: 1.0.0
+Summary: Zero-cost proxies for NAS - predicting accuracy without training.
+Home-page: https://github.com/mohsaied/zero-cost-nas
+Download-URL: https://github.com/mohsaied/zero-cost-nas
+Author: SAIC-Cambridge, On-Device Team, Automated ML Group
+Author-email: on.device@samsung.com
+Requires-Python: >=3.6.0
+License-File: LICENSE

@@ -147,8 +147,10 @@ def compute_nas_score(AnyPlainNet, random_structure_str, gpu, args,loader, input
                                                                     resolution=args.input_image_size,
                                                                     batch_size=args.batch_size)
 
-        elif args.zero_shot_score == 'orthogonal':
+        elif args.zero_shot_score == 'orthogonal_snip':
             the_nas_core = compute_orthogornal_score.compute_nas_score(loader, input, target, the_model,n_classes=args.num_classes, device=gpu, grad_metric='snip')
+        elif args.zero_shot_score == 'orthogonal_synflow':
+            the_nas_core = compute_orthogornal_score.compute_nas_score(loader, input, target, the_model,n_classes=args.num_classes, device=gpu, grad_metric='synflow')
             # print('current scores')
             # print(the_nas_core)
     except Exception as err:

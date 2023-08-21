@@ -32,8 +32,22 @@ Please check our paper for more details.
 ### System Requirements
 
 * PyTorch >= 1.5, Python >= 3.7
+* You can refering requirements.txt for system setting, please note the package version could slightly different based on you GPU driver version.
 * By default, ImageNet dataset is stored under \~/data/imagenet; CIFAR-10/CIFAR-100 is stored under \~/data/pytorch\_cifar10 or \~/data/pytorch\_cifar100
-* Pre-trained parameters are cached under \~/.cache/pytorch/checkpoints/zennet\_pretrained
+
+You can refer this command for create enviroment
+```
+conda env create --name tcet -f environment.yml
+conda activate tcet
+```
+
+### Install Neccessary Package
+Install Zero-cost-nas
+
+```
+cd zero-cost-nas
+pip install .
+```
 
 
 ### Searching on CIFAR-10/100
@@ -41,7 +55,7 @@ Searching for CIFAR-10/100 models with budget params < 1M , using T-CET
 
 ```bash
 scripts/TCET_snip_NAS_cifar_params1M.sh
-scripts/TCET_synflow_NAS_IM_flops450M.sh
+scripts/TCET_synflow_NAS_cifar_params1M.sh
 ```
 
 ### Searching on ImageNet

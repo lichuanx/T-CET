@@ -17,7 +17,7 @@ echo "SuperConvK3BNRELU(3,8,1,1)SuperResK3K3(8,16,1,8,1)SuperResK3K3(16,32,2,16,
 > ${save_dir}/init_plainnet.txt
 
 python evolution_search.py --gpu 0 \
-  --zero_shot_score orthogonal \
+  --zero_shot_score orthogonal_snip \
   --search_space SearchSpace/search_space_XXBL.py \
   --budget_model_size ${budget_model_size} \
   --max_layers ${max_layers} \
