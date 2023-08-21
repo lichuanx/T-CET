@@ -1,7 +1,7 @@
 
 # T-CET:Exploiting Network Compressibility and Topology in Zero-Cost NAS
 
-Here is the official implementation for T-CET zero-cost metrics that searched on ZenNAS search space. More framework adopted from [ZenNAS](https://github.com/idstcv/ZenNAS)
+Here is the official implementation for T-CET zero-cost metrics that searched on ZenNAS search space. Most framework adopted from [ZenNAS](https://github.com/idstcv/ZenNAS)
 
 ## Abstract
 Neural Architecture Search (NAS) has been widely used to discover high-performance neural network architectures over manually designed approaches. Despite their success, current NAS approaches often require extensive evaluation of many candidate architectures in the search space or training of large super networks. To reduce the search cost, recently proposed zero-cost proxies are utilized to efficiently predict the performance of an architecture. However, while many new proxies have been proposed in recent years, relatively little attention has been dedicated to pushing our understanding of the existing ones, with their mutual effects on each other being a particularly -- but not entirely -- overlooked topic. Contrary to that trend, in our work, we argue that it is worth revisiting and analysing the existing proxies in order to further push the boundaries of zero-cost NAS. Towards that goal, we propose to view the existing proxies through a common lens of network compressibility, trainability, and expressivity, as discussed in pruning literature. Notably, doing so allows us to build a better understanding of the high-level relationship between different proxies as well as refine some of them into their more informative variants.
@@ -60,9 +60,19 @@ scripts/TCET_synflow_NAS_cifar_params1M.sh
 
 ### Searching on ImageNet
 
-Searching for ImageNet models, with FLOPs budget from 400M to 800M with T-CET:
+Searching for ImageNet models with FLOPs budget from 400M to 800M with T-CET:
 ``` bash
 scripts/TCET_snip_NAS_IM_flops1G.sh
 scripts/TCET_snip_NAS_IM_flops600M.sh
 scripts/TCET_snip_NAS_IM_flops450M.sh
+```
+
+## Scoring Network From Other Search Spaces
+We provide a more efficient toolkit repository to score networks from diverse search spaces. [Toolkit](https://github.com/iViolinSolo/zero-cost-proxies)
+
+
+## Citation
+
+```
+Xiang, Lichuan, Hunter, Rosco, Dudziak, Łukasz, Xu, Minghao and Wen, Hongkai (2023) Exploiting network compressibility and topology in zero-cost NAS. In: International Conference on Automated Machine Learning (AutoML 2023), Potsdam/Berlin, Germany, 12–15 Sep 2023 (In Press)
 ```
