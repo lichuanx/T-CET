@@ -12,17 +12,18 @@ We leverage these insights to design a novel saliency and metric aggregation met
 We use the ResNet-like search space and search for models within parameter budget 1M. All models are searched by the same evolutionary strategy, trained on CIFAR-10/100 for 1440 epochs with auto-augmentation, cosine learning rate decay, weight decay 5e-4. We report the top-1 accuracies in the following table:
 
 
-| proxy     | CIFAR-10 |
-|-----------|----------|
-| T-CET(SNIP)   | **97.22%**    |
-| T-CET(Synflow)   | **96.6%**    |
-| [Zen-NAS](https://arxiv.org/abs/2102.01063)   | 96.2%    |
-| FLOPs     | 93.1%    |
-| grad-norm | 92.8%    | 
-| [synflow](https://arxiv.org/abs/2101.08134)   | 95.1%    | 
-| [TE-NAS](https://arxiv.org/abs/2102.11535)    | 96.1%    | 
-| [NASWOT](https://arxiv.org/abs/2006.04647)    | 96.0%    | 
-| Random    | 93.5%    | 
+| proxy     | CIFAR-10 | CIFAR-100 | 
+|-----------|----------| ----------|
+| T-CET(SNIP)   | **97.22%**    | **80.4%**|
+| T-CET(Synflow)   | **96.6%**    | **80.0%**|
+|Zico| *97.0%* | *80.2%*|
+| [Zen-NAS](https://arxiv.org/abs/2102.01063)   | 96.2%    | 80.1%|
+| FLOPs     | 93.1%    | 64.7%|
+| grad-norm | 92.8%    | 65.4%|
+| [synflow](https://arxiv.org/abs/2101.08134)   | 95.1%    | 75.9%| 
+| [TE-NAS](https://arxiv.org/abs/2102.11535)    | 96.1%    | 77.2%|
+| [NASWOT](https://arxiv.org/abs/2006.04647)    | 96.0%    | 77.5%|
+| Random    | 93.5%    | 71.1%|
 
 Please check our paper for more details.
 
